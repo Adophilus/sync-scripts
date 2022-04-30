@@ -13,7 +13,7 @@ events: [ 'update', 'remove' ]
 */
 
 watch(
-  './',
+  process.argv[2] || './',
   { recursive: true, filter: (f) => !/node_modules|\.git/.test(f) },
   function (event, filepath) {
     // console.log('%s changed.', name)
